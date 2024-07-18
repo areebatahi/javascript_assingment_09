@@ -201,3 +201,46 @@
 // document.write("karachi to hydarabad distance in km is " + kmInput + " km <br>" + meter() + feet() + inches() + centimeters());
 
 // 9.
+// function claculateOverTimePay(hoursWorked) {
+//     var regularHours = 40;
+//     var overTimeRate = 12.00;
+//     var overTimeHours = 0;
+//     var overTimePay = 0.00;
+//     if (hoursWorked > regularHours) {
+//         overTimeHours = hoursWorked - regularHours;
+//         overTimePay = overTimeRate * overTimeHours;
+//     }
+//     return overTimePay.toFixed(2);
+// }
+// var input = +prompt("Enter hours worked");
+// console.log("Over time pay " + input + " hours worked is Rs." + claculateOverTimePay(input));
+
+
+// 10.
+// function calculateCurrencyNotes(amount) {
+//     var hundreds = 0;
+//     var fifties = 0;
+//     var tens = 0;
+//     while (amount >= 100) {
+//         amount -= 100;
+//         hundreds++;
+//     }
+//     while (amount >= 50) {
+//         amount -= 50;
+//         fifties++;
+//     }
+//     while (amount >= 10) {
+//         amount -= 10;
+//         tens++;
+//     }
+//     return {
+//         hundreds: hundreds,
+//         fifties: fifties,
+//         tens: tens
+//     };
+// }
+// let amount = 850;
+// let notes = calculateCurrencyNotes(amount);
+// console.log("Number of 100 notes:" + notes.hundreds);
+// console.log("Number of 50 notes:" + notes.fifties);
+// console.log("Number of 10 notes:" + notes.tens);
