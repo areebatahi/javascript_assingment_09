@@ -62,123 +62,67 @@
 
 
 // 5.
-// function indexOfFunction(str, char) {
-//     var caseStr = str.toLowerCase();
-//     for (var i = 0; i < caseStr.length; i++) {
-//         if (caseStr[i] === char) {
+// function indexofFunction(str, ltr) {
+//     var changeStr = str.toLowerCase();
+//     var changeltr = ltr.toLowerCase();
+// for (var i = 0; i < changeStr.length; i++) {
+//     if (changeStr[i] === changeltr) {
+//         return "index of : " + i;
+//     }
+// }
+// return "index of : " + -1;
+
+//________using while loop_______
+//     var i = 0;
+//     while (i < changeStr.length) {
+//         if (changeStr[i] === changeltr) {
 //             return i;
 //         }
+//         i++
 //     }
 //     return -1;
 // }
-// document.write(indexOfFunction("javascript", "v"));
+// console.log(indexofFunction("JavaScript", "P"));
 
 
 // 6.
-// var str = prompt("Enter a string");
-// function vowelDelete() {
-//     var str1 = str.toLowerCase();
-//     if(str1.length <= 25){
-//         alert("that the sentence is not more than 25 characters long.")
+// function deleteVowels(str) {
+//     var vowel = "aeiouAEIOU";
+//     var result = "";
+//     for (var i = 0; i < str.length; i++) {
+//         if (vowel.indexOf(str[i]) === -1) {
+//             result += str[i];
+//         }
 //     }
-//     var replace = str1.replace(/a/g, "");
-//     var replace1 = replace.replace(/i/g, "");
-//     var replace2 = replace1.replace(/e/g, "");
-//     var replace3 = replace2.replace(/o/g, "");
-//     var replace4 = replace3.replace(/u/g, "");
-//     return replace4
+//     return result;
 // }
-// document.write(str + "<br>" + vowelDelete());
+// document.write(deleteVowels("tahira"));
 
 
 // 7.
-// function countVowelPairs(text) {
-//     text = text.toLowerCase();
-//     for (var i = 0; i < text.length - 1; i++) {
-//       var pair = text[i] + text[i + 1];
-//       switch (pair) {
-//         case 'aa':
-//             document.write("aa" + "<br>");
-//                break;
-//         case 'ae':
-//             document.write("ae" + "<br>");
-//                break;
-//         case 'ai':
-//             document.write("ai" + "<br>");
-//                break;
-//         case 'ao':
-//             document.write("ao" + "<br>");
-//                break;
-//         case 'au':
-//             document.write("au" + "<br>");
-//                break;
-//         case 'ea':
-//             document.write("ea" + "<br>");
-//                break;
-//         case 'ee':
-//             document.write("ee" + "<br>");
-//                break;
-//         case 'ei':
-//             document.write("ei" + "<br>");
-//                break;
-//         case 'eo':
-//             document.write("eo" + "<br>");
-//                break;
-//         case 'eu':
-//             document.write("eu" + "<br>");
-//                break;
-//         case 'ia':
-//             document.write("ia" + "<br>");
-//                break;
-//         case 'ie':
-//             document.write("ie" + "<br>");
-//                break;
-//         case 'ii':
-//             document.write("ii" + "<br>");
-//                break;
-//         case 'io':
-//             document.write("io" + "<br>");
-//                break;
-//         case 'iu':
-//             document.write("iu" + "<br>");
-//                break;
-//         case 'oa':
-//             document.write("oa" + "<br>");
-//                break;
-//         case 'oe':
-//             document.write("oe" + "<br>");
-//                break;
-//         case 'oi':
-//             document.write("oi" + "<br>");
-//                break;
-//         case 'oo':
-//             document.write("oo" + "<br>");
-//                break;
-//         case 'ou':
-//             document.write("ou" + "<br>");
-//                break;
-//         case 'ua':
-//             document.write("ua" + "<br>");
-//                break;
-//         case 'ue':
-//             document.write("ue" + "<br>");
-//                break;
-//         case 'ui':
-//             document.write("ui" + "<br>");
-//                break;
-//         case 'uo':
-//             document.write("uo" + "<br>");
-//                break;
-//         case 'uu':
-//             document.write("uu" + "<br>");
-//           break;
-//       }
-//     }
-//   }
-
-//   var text = "Pleases read this application and give me gratuity";
-//   console.log(countVowelPairs(text));
-
+function countVowelpairs(str) {
+    var count = 0;
+    var i = 0;
+    while (i < str.length - 1) {
+        var char1 = str[i];
+        var char2 = str[i + 1];
+        var vowelPair = [];
+        switch (true) {
+            case (char1 === "a" && (char2 === "a" || char2 === "e" || char2 === "i" || char2 === "o" || char2 === "u")):
+            case (char1 === "e" && (char2 === "a" || char2 === "e" || char2 === "i" || char2 === "o" || char2 === "u")):
+            case (char1 === "i" && (char2 === "a" || char2 === "e" || char2 === "i" || char2 === "o" || char2 === "u")):
+            case (char1 === "o" && (char2 === "a" || char2 === "e" || char2 === "i" || char2 === "o" || char2 === "u")):
+            case (char1 === "u" && (char2 === "a" || char2 === "e" || char2 === "i" || char2 === "o" || char2 === "u")):
+                count++;
+                vowelPair.push(char1 + char2);
+                console.log(vowelPair);
+                break;
+        }
+        i++
+    }
+    return count;
+}
+console.log(countVowelpairs("Pleases read this application and give me gratuity"));
 
 // 8.
 // var kmInput = +prompt("Enter karachi to hydarabad distance in km");
